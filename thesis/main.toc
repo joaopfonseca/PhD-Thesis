@@ -1,0 +1,86 @@
+\contentsline {chapter}{List of Figures}{v}{chapter*.5}%
+\contentsline {chapter}{List of Tables}{vi}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Data Augmentation}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Active Learning}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Research Questions}{8}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Main Objectives}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Methods}{9}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Path of Research}{10}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Research Trends and Applications of Data Augmentation Algorithms}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{12}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Data Augmentation Methods}{14}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Heuristic Approaches}{15}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Deep Learning Approaches}{16}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Methodology}{17}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Literature Collection}{17}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Data Preprocessing}{19}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Journal and Conference analysis}{19}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Keyword Analysis}{20}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Topic Modelling}{20}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Software Implementation}{20}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}Results \& Discussion}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Journal and Conference Analysis}{21}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Keyword Analysis}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Topic Analysis}{24}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Research Gap Discussion}{28}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Conclusion}{29}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Improving Imbalanced Land Cover Classification with K-means SMOTE\spacefactor \@m {}: Detecting and Oversampling Distinctive Minority Spectral Signatures}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Imbalanced Learning Approaches}{33}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Non-informed resampling methods}{34}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Heuristic methods}{34}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Methodology}{37}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Datasets}{37}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Machine Learning Algorithms}{39}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Evaluation Metrics}{41}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Experimental Procedure}{42}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Software Implementation}{43}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Results \& Discussion}{43}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Results}{43}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Statistical Analysis}{45}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Discussion}{46}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Conclusion}{47}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Increasing the Effectiveness of Active Learning: Introducing Artificial Data Generation in Active Learning for Land Use/Land Cover Classification}{48}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{48}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Active Learning Approaches}{50}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Non-informed selection criteria}{52}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Ensemble-based selection criteria}{52}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Entropy-based criteria}{53}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Other relevant criteria}{53}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Artificial Data Generation Approaches}{54}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Proposed method}{54}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Methodology}{55}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Datasets}{56}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Machine Learning Algorithms}{57}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Evaluation Metrics}{58}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Experimental Procedure}{59}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Software Implementation}{60}{subsection.4.5.5}%
+\contentsline {section}{\numberline {4.6}Results \& Discussion}{60}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Results}{61}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Statistical Analysis}{62}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Discussion}{64}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Conclusion}{65}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Improving Active Learning Performance Through the Use of Data Augmentation}{66}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{66}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Background}{68}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Active Learning}{68}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Data Augmentation}{69}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Data Augmentation in Active Learning}{69}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Proposed Method}{70}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Methodology}{74}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Datasets}{74}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Machine Learning Algorithms}{76}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Evaluation Metrics}{76}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Experimental Procedure}{77}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Software Implementation}{78}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Results \& Discussion}{78}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Results}{80}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Statistical Analysis}{82}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Discussion}{82}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Conclusion}{87}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Moving Forward}{88}{chapter.6}%
+\contentsline {part}{Bibliography}{100}{chapter*.75}%
+\contentsline {part}{Appendices}{101}{chapter*.75}%
+\contentsline {chapter}{\numberline {A}Improving Imbalanced Land Cover Classification with K-means SMOTE: Detecting and Oversampling Distinctive Minority Spectral Signatures}{101}{appendix.A}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

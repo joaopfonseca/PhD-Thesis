@@ -1,0 +1,13 @@
+Classifier,Evaluation Metric,Oversampling,Proposed
+DT,Accuracy,{7.7e-01},\textbf{{1.1e-04}}
+DT,F-score,{6.3e-02},\textbf{{2.0e-06}}
+DT,G-mean,\textbf{{1.0e-08}},\textbf{{2.9e-12}}
+KNN,Accuracy,\textbf{{1.0e-02}},{8.5e-01}
+KNN,F-score,\textbf{{7.1e-07}},\textbf{{8.3e-13}}
+KNN,G-mean,\textbf{{1.9e-11}},\textbf{{1.0e-12}}
+LR,Accuracy,\textbf{{3.2e-02}},{8.3e-01}
+LR,F-score,\textbf{{1.5e-09}},\textbf{{5.8e-17}}
+LR,G-mean,\textbf{{1.9e-13}},\textbf{{5.6e-16}}
+RF,Accuracy,{4.3e-01},{4.3e-01}
+RF,F-score,\textbf{{1.4e-11}},\textbf{{1.1e-12}}
+RF,G-mean,\textbf{{1.5e-10}},\textbf{{1.2e-10}}

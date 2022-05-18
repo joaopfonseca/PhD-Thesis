@@ -1,0 +1,42 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Schema containing a general Heuristic Data Augmentation taxonomy. \relax }}{3}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Examples of data augmentation Strategies.}}{4}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Examples of data generation using SMOTE and G-SMOTE\spacefactor \@m {}.}}{4}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Diagram depicting an AL initialization. \relax }}{5}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Diagram depicting an AL iteration.}}{6}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Planned structure and methodological approach of the doctoral work. \relax }}{10}{figure.caption.12}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example of data augmentation in a 2-dimensional binary classification setting.}}{13}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Data Augmentation concept map. \relax }}{14}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a sparse input space and its corresponding feature space.}}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagram of the proposed literature analysis approach. \relax }}{18}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Data filtering pipeline. \relax }}{19}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Annual number of publications containing the keyword ``data augmentation''. \relax }}{21}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Keyword network. \relax }}{25}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Distribution of documents over the different topics found.}}{26}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Topic frequency per year. \relax }}{28}{figure.caption.27}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of a complex input space.}}{33}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Example of SMOTE's data generation process}}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of K-means SMOTE's data generation process.}}{37}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Data collection and preprocessing pipeline.\relax }}{38}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Gray scale visualization of a band and ground truth of each scene used in this study.}}{40}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Experimental procedure.}}{42}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Results for mean ranking of oversamplers across datasets. \relax }}{44}{figure.caption.41}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram depicting the typical AL framework. \relax }}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Example of G-SMOTE's generation process.}}{55}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Proposed AL framework.}}{56}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Gray scale visualization of a band and ground truth of each scene used in this study.}}{57}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Experimental procedure.}}{60}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Mean data utilization rates.}}{63}{figure.caption.55}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram depicting a typical AL iteration.}}{68}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram depicting the proposed AL iteration.}}{71}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Simplified diagrams highlighting the differences between the proposed and standard AL iterations.}}{72}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Data preprocessing pipeline. \relax }}{75}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Experimental procedure flowchart.}}{78}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Mean data utilization rates.}}{81}{figure.caption.70}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

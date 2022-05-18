@@ -1,0 +1,110 @@
+\documentclass[
+    11pt,
+    parskip=half,
+    abstract=on,
+]{scrreprt}
+\usepackage[a4paper, tmargin=2.54cm, bmargin=2.54cm, lmargin=18mm, rmargin=18mm]{geometry}
+
+\setcounter{tocdepth}{1}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\listfigurename}{List of Figures}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\usepackage{array}
+\usepackage[square,sort,comma,numbers]{natbib}
+% \usepackage[comma,authoryear]{natbib} % Use to validate duplicate references
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{pgfplotstable}  % read csv tables
+\pgfplotsset{compat=1.14}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{amsmath}
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{changepage}
+\usepackage[printonlyused]{acronym}
+\usepackage{subcaption}
+\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
+
+\usepackage{soul} % Used to highlight text
+
+\definecolor{hypecol}{HTML}{0875b7}
+\hypersetup{%
+    colorlinks,
+    linkcolor={hypecol},
+    citecolor={hypecol},
+    urlcolor={hypecol}
+}
+
+
+\NewDocumentCommand{\thesischapter}{o m m}{%
+   \IfNoValueTF{#1}
+     {\chapter[#2]{#2\origtitle{#3}}}
+     {\chapter[#1]{#2\origtitle{#3}}}%
+}
+\newcommand\origtitle[1]{\\
+  \parbox{\textwidth}{\normalsize\vspace*{2\baselineskip}#1}}
+
+\begin{document}
+
+\input{chapters/0-cover}
+\newpage
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\input{chapters/0.1-affirmation}
+\input{chapters/0.2-abstract}
+% \input{chapters/0.3-acknowledgements}
+\input{chapters/0.4-tocs-and-lists}
+
+% MAIN THESIS
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\input{chapters/1-introduction}
+\input{chapters/2-data-augmentation-trends}
+\input{chapters/3-kmeans-smote-lulc}
+\input{chapters/4-al-generator-lulc}
+\input{chapters/5-active-learning-augmentation}
+\input{chapters/6-moving-forward}
+
+% REFERENCES
+\bibliography{references}
+\bibliographystyle{ieeetr}
+% \bibliographystyle{plain} % Use to validate duplicate references
+\addcontentsline{toc}{part}{Bibliography}
+
+
+% APPENDICES
+\appendix
+\cleardoublepage%
+\addcontentsline{toc}{part}{Appendices}
+
+\chapter{Improving Imbalanced Land Cover Classification with K-means SMOTE:
+Detecting and Oversampling Distinctive Minority Spectral Signatures}
+
+\pgfplotstabletypeset[
+	begin table=\begin{longtable},
+	end table=\end{longtable},
+	col sep=comma,
+	header=true,
+	columns={Dataset,Classifier,Metric,NONE,ROS,SMOTE,B-SMOTE,K-SMOTE},
+    string type,
+    every head row/.style={before row={\toprule}, after row=\midrule\endhead},
+    every last row/.style={after row={\bottomrule
+        \caption[Mean cross-validation scores for each dataset.]{%
+            Mean cross-validation scores for each dataset.  Legend: IP -
+            Indian Pines, KSC - Kennedy Space Center, PC - Pavia Center, PU -
+            Pavia University, SA - Salinas A.
+        }~\label{tab:cross_validation_scores}
+    }}
+]{figures/kmeans-smote-lulc/wide_optimal.csv}
+
+\end{document}

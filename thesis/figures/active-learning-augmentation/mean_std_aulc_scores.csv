@@ -1,0 +1,13 @@
+Classifier,Evaluation Metric,Standard,Oversampling,Proposed
+DT,Accuracy,0.663 $\pm$ 0.149,0.658 $\pm$ 0.153,\textbf{0.664 $\pm$ 0.155}
+DT,F-score,0.610 $\pm$ 0.176,0.612 $\pm$ 0.179,\textbf{0.618 $\pm$ 0.181}
+DT,G-mean,0.744 $\pm$ 0.129,0.751 $\pm$ 0.127,\textbf{0.755 $\pm$ 0.129}
+KNN,Accuracy,\textbf{0.741 $\pm$ 0.160},0.730 $\pm$ 0.178,0.734 $\pm$ 0.179
+KNN,F-score,0.678 $\pm$ 0.208,0.684 $\pm$ 0.211,\textbf{0.687 $\pm$ 0.213}
+KNN,G-mean,0.786 $\pm$ 0.152,\textbf{0.804 $\pm$ 0.139},\textbf{0.804 $\pm$ 0.141}
+LR,Accuracy,\textbf{0.736 $\pm$ 0.152},0.723 $\pm$ 0.185,0.731 $\pm$ 0.184
+LR,F-score,0.644 $\pm$ 0.228,0.673 $\pm$ 0.220,\textbf{0.682 $\pm$ 0.221}
+LR,G-mean,0.767 $\pm$ 0.162,0.811 $\pm$ 0.134,\textbf{0.814 $\pm$ 0.136}
+RF,Accuracy,\textbf{0.789 $\pm$ 0.148},0.786 $\pm$ 0.153,0.785 $\pm$ 0.156
+RF,F-score,0.724 $\pm$ 0.214,\textbf{0.735 $\pm$ 0.204},\textbf{0.735 $\pm$ 0.205}
+RF,G-mean,0.818 $\pm$ 0.150,\textbf{0.834 $\pm$ 0.135},0.833 $\pm$ 0.135
