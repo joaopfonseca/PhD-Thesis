@@ -10,3 +10,7 @@
 *.spl
 *.loc
 *.soc
+*.lof
+*.lot
+*.toc
+*.glsdefs
