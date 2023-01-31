@@ -33,6 +33,8 @@
 \usepackage[printonlyused]{acronym}
 \usepackage{subcaption}
 \usepackage[ruled, vlined, linesnumbered]{algorithm2e}
+\usepackage{datetime}
+\usepackage{pdfpages}
 
 \usepackage{soul} % Used to highlight text
 
@@ -53,16 +55,21 @@
 \newcommand\origtitle[1]{\\
   \parbox{\textwidth}{\normalsize\vspace*{2\baselineskip}#1}}
 
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+
 \begin{document}
 
+\includepdf[pages={1}]{chapters/front-and-back-cover/front-and-back-cover.pdf}
+\includepdf[pages={2}, landscape=true]{chapters/front-and-back-cover/front-and-back-cover.pdf}
 \input{chapters/0-cover}
 \newpage
 
 \pagenumbering{roman}
 \setcounter{page}{1}
 \input{chapters/0.1-affirmation}
-\input{chapters/0.2-abstract}
 \input{chapters/0.3-acknowledgements}
+\input{chapters/0.2-abstract}
 \input{chapters/0.4-tocs-and-lists}
 
 % MAIN THESIS
@@ -107,4 +114,6 @@ Detecting and Oversampling Distinctive Minority Spectral Signatures}
     }}
 ]{figures/kmeans-smote-lulc/wide_optimal.csv}
 
+
+\includepdf[pages={3}]{chapters/front-and-back-cover/front-and-back-cover.pdf}
 \end{document}
