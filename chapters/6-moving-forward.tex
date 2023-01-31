@@ -40,32 +40,6 @@ This work is also under development and is intended to follow
 Chapter~\ref{chp:active-learning-augmentation}. At the time of writing, the
 algorithmic implementation is in progress.
 
-The conceptualization of the framework discussed is shown in
-Figures~\ref{fig:al_initialization2} and~\ref{fig:al_iteration2}. We intend to
-use a self-supervised learning technique before the data annotation phase of
-AL to have a well-tuned, pretrained model to start with. The iterative process
-will use a semi-supervised loss function to train the shallow layers of the
-network, to maximize the value of both labeled and unlabeled data in the
-iterative process. In addition, the training data will also be augmented
-using synthetic data to further train and regularize the classifier.
-
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=.85\linewidth]{al_initialization}
-%     \caption{%
-%         Diagram depicting the initialization of the S$^4$AD-Learning model.
-%     }~\label{fig:al_initialization2}
-% \end{figure}
-% 
-% 
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=.5\linewidth]{al_iteration}
-%     \caption{%
-%         Diagram depicting the iterative procedure of the S$^4$AD-Learning model.
-%     }~\label{fig:al_iteration2}
-% \end{figure}
-
 The last chapter will close the thesis with the conclusions, discussion of the
 proposed research questions and recommendations for future work based on the
 results presented in previous chapters.
