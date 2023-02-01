@@ -13,8 +13,6 @@
 \graphicspath{{figures/}}
 
 \usepackage{array}
-\usepackage[square,sort,comma,numbers]{natbib}
-% \usepackage[comma,authoryear]{natbib} % Use to validate duplicate references
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{pgfplotstable}  % read csv tables
 \pgfplotsset{compat=1.14}
@@ -38,6 +36,23 @@
 
 \usepackage{soul} % Used to highlight text
 
+% use \citet for inline text references, \cite for normal citations
+\usepackage[
+    style=numeric,
+    citestyle=numeric,
+    sorting=none,
+    natbib=true,
+    backend=biber, 
+    maxcitenames=1, 
+    maxbibnames=99
+]{biblatex}
+\bibliography{references}
+\usepackage{breakcites}
+
+\usepackage{tabularx}
+\renewcommand\tabularxcolumn[1]{m{#1}} % for vertical centering text in X column
+\usepackage{multirow} % To merge cells vertically
+
 \definecolor{hypecol}{HTML}{0875b7}
 \hypersetup{%
     colorlinks,
@@ -58,6 +73,7 @@
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH] \THEYEAR}
 
+
 \begin{document}
 
 \includepdf[pages={1}]{chapters/front-and-back-cover/front-and-back-cover.pdf}
@@ -76,7 +92,8 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 \input{chapters/1-introduction}
-\input{chapters/2-data-augmentation-trends}
+% \input{chapters/2-data-augmentation-trends}
+\input{chapters/2-synthetic-data-review}
 \input{chapters/3-kmeans-smote-lulc}
 \input{chapters/4-al-generator-lulc}
 \input{chapters/5-active-learning-augmentation}
@@ -84,9 +101,7 @@
 \input{chapters/7-moving-forward}
 
 % REFERENCES
-\bibliography{references}
-\bibliographystyle{ieeetr}
-% \bibliographystyle{plain} % Use to validate duplicate references
+\printbibliography%
 \addcontentsline{toc}{part}{Bibliography}
 
 
