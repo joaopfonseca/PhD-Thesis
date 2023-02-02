@@ -1,4 +1,6 @@
 # LaTeX
+*.run.xml
+*.bcf
 *.synctex.gz
 *.aux
 *.bbl
