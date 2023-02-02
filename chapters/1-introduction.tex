@@ -7,7 +7,7 @@ Its applications range from environmental monitoring, land change detection,
 and natural hazard assessment to agriculture and water/wetland
 monitoring~\cite{Khatami2016}. However, the production of LULC maps often
 require the involvement of multiple photo-interpreters with specialized
-skills, making the process expensive and time-consuming and unsuitable for
+skills, making the process expensive, time-consuming and unsuitable for
 operational LULC mapping over large areas~\cite{Douzas2019rs}. Therefore, the
 manual production of LULC maps are often outdated by the time they are
 completed, limiting its value to the analysis past conditions in the area of
@@ -20,7 +20,7 @@ to train ML algorithms to automatically detect the different LULC classes.  To
 do this, the usage of recent supervised learning techniques seems to be a
 promising path to achieve reliable and updated
 maps~\cite{tewkesbury2015critical}. However, the practical application of this
-approach is hampered by various limitations: 
+approach is hampered by several limitations: 
 
 \begin{enumerate}
     \item Human error. The quality of the classifiers produced is heavily
@@ -61,8 +61,9 @@ approach is hampered by various limitations:
 \end{enumerate}
 
 The latter two challenges, imbalanced learning (\textit{i.e.}, infrequent LULC
-classes) and scarcity of labeled data, are the focus of this thesis. However,
-these two challenges may be addressed in various different ways.
+classes) and scarcity of labeled data, are the focus of this dissertation.
+These two challenges may be addressed in various different ways, all of which
+will be discussed throughout the following chapters.
 
 The asymmetry frequently found on LULC class distributions affects the
 performance of ML classifiers. In this scenario, during the ML classifier's
@@ -82,8 +83,8 @@ learning can be divided into three main groups~\cite{Fernandez2013}:
 \end{enumerate}
 
 The latter set of methods, resampling solutions, benefit from their
-simplicity. This type of approaches do not require domain knowledge to define
-a cost matrix and dispense the usage of specialized classifiers. These methods
+simplicity. This type of approach does not require domain knowledge to define
+a cost matrix and does not require specialized classifiers. These methods
 can be further divided into (1) Oversampling, where an algorithm generates
 artificial observations belonging to the minority class, (2) Undersampling,
 where an algorithm removes observations belonging to the majority class or (3)
@@ -93,10 +94,10 @@ corner case of augmentation methods for tabular data in later chapters. In
 Section~\ref{sec:data_augmentation} this topic is discussed to a greater
 extent.
 
-The second challenge this thesis focuses on is the implementation of useful ML
-algorithms in environments with scarce availability of labeled data. There are
-three different types of techniques to address this problem, which fall in
-between supervised and unsupervised learning:
+The second challenge discussed in this dissertation is the implementation of
+useful ML algorithms in environments with scarce availability of labeled data.
+There are three different types of techniques to address this problem, all of
+which fall between supervised and unsupervised learning:
 
 \begin{enumerate}
     \item Semi-supervised Learning. Uses both labeled and unlabeled data in
@@ -124,19 +125,22 @@ Section~\ref{sec:active_learning} this topic is discussed to a greater extent.
 \section{Data Augmentation}~\label{sec:data_augmentation}
 
 Data Augmentation methods expand the training dataset by introducing new and
-informative observations~\cite{Behpour2019}. The production of artificial data
-may be done via the introduction of perturbations on the
+informative observations~\cite{Behpour2019}. For this reason, oversampling is
+often considered a special case of data augmentation. The production of
+artificial data may be done via the introduction of perturbations on the
 input~\cite{Zhong2020}, feature~\cite{DeVries2017} or output
-space~\cite{Behpour2019}. Data Augmentation methods may be divided into
-Heuristic and Neural Network-based approaches~\cite{Shorten2019}. In addition,
-they may also be distinguished based on its data generation policy, whether
-local (considers a local/specific subset of the dataset) or global (considers
-the overall distribution of the training dataset).
+space~\cite{Behpour2019}. According to~\citet{Shorten2019} data augmentation
+methods may be divided into Heuristic and Neural Network-based approaches. In
+addition, they may also be distinguished based on its data generation policy,
+whether local (considers a local/specific subset of the dataset) or global
+(considers the overall distribution of the training dataset).
 Figure~\ref{fig:data_augmentation_taxonomy} shows the general taxonomy of
-Heuristic Data Augmentation methods. Finding the appropriate Data Augmentation
-method generally depends on the domain~\cite{DeVries2017}, although some
-studies discuss which methods are more appropriate according to the
-domain~\cite{Shorten2019, Iwana2021, Wong2016}.
+Heuristic Data Augmentation methods. However, we consider this taxonomy to be
+incomplete; a more complete taxonomy is proposed in
+Chapter~\ref{chp:synthetic-data-review}. Finding the appropriate Data
+Augmentation method generally depends on the domain~\cite{DeVries2017},
+whereas few studies discuss which methods are more appropriate according to
+the domain~\cite{Shorten2019, Iwana2021, Wong2016}.
 
 \begin{figure}[ht]
 	\centering
@@ -451,62 +455,35 @@ manifold-preserving graph reduction algorithm beyond the normal Margin
 Sampling method.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% scarcity of labeled data, rare classes
-
-% Data augmentation 
-
-% Active Learning
-
 \section{Research Questions}
 
-The main research questions (RQ) and goals of the work plan are the following:
+The main research questions (RQ) and goals of this dissertation are the
+following:
+
 \begin{enumerate}
-    \item What are the main research lines in data augmentation?
+    \item What are the main research lines in synthetic data generation?
           \begin{itemize}
-              \item Development of a literature review to study existing data
-                  augmentation methods and the core fields where they are
-                  being used.
+              \item Development of a literature review to study existing
+                  synthetic data generation methods and the core fields where
+                  they are being used.
           \end{itemize}
+    \item How can one oversample data with both continuous and categorical
+        features? 
+        \begin{itemize}
+            \item Development of an improved oversampling method to be used
+                with mixed data types.
+        \end{itemize}
     \item How can automatic LULC mapping achieve an increased and consistent
         quality?
           \begin{itemize}
               \item Exploration of imbalanced learning methods in the context
                   of LULC\@.
           \end{itemize}
-    \item How to perform automated LULC mapping efficiently under limited
+    \item How can one perform automated LULC mapping efficiently under limited
         ground-truth data availability?
         \begin{itemize}
             \item Development of an improved active learning framework in the
                 remote sensing domain using artificial data generation.
-        \end{itemize}
-    \item How to oversample data with both continuous and categorical
-        features? 
-        \begin{itemize}
-            \item Development of an improved oversampling method to be used
-                with mixed data types.
         \end{itemize}
 \end{enumerate}
 
@@ -516,41 +493,45 @@ This research aims to apply and develop new data preprocessing techniques to
 LULC classification, with a focus on AL and oversampling techniques. The main
 objective is to optimize ML classifiers' performance with minimal labeled data
 and/or imbalanced learning scenarios. This objective was decomposed into four
-research questions. We start by performing a literature review of data
-augmentation techniques (RQ1). Second, we apply a state-of-the-art
-oversampling method to understand its effect in LULC classification tasks
-(RQ2). Third, we modify the AL framework to include a generator and optimize
-its augmentation policy to further reduce the amount of required labeled data
-for ML classifiers to reach a satisfactory performance (RQ3). Finally, we
-propose a new oversampling method for datasets with both continuous and
-categorical features (RQ4).
+research questions. We start by performing a literature review of synthetic
+data generation techniques (RQ1). Second, we propose a new oversampling method
+for datasets with both continuous and categorical features (RQ2). Third, we
+apply a state-of-the-art oversampling method to understand its effect in LULC
+classification tasks (RQ3). Finally, we modify the AL framework to include a
+generator and optimize its augmentation policy to reduce the amount of labeled
+data required for ML classifiers to reach a satisfactory performance (RQ4).
 
 Each contribution towards the different RQs is divided into different studies.
 All chapters refer to a different RQ with the exception
 Chapters~\ref{chp:al-generator-lulc}
-and~\ref{chp:active-learning-augmentation}, which refer to RQ3. The future
-steps necessary to complete the PhD plan are described in
-Chapter~\ref{chp:moving_forward}. The current structure of the thesis is shown
-in Table~\ref{tab:studies}.
+and~\ref{chp:active-learning-augmentation}, which refer to RQ3. The structure
+of this dissertation is shown in Table~\ref{tab:studies}.
 
 RQ1 aims to investigate and consolidate data augmentation methods. This was
-done by conducting a literature review to study the main areas of application
-of data augmentation methods. To do this, we created a database of research
-papers containing the author list, year of publication, journal/conference,
-keywords, title, abstract and number of citation of a large number of papers
-related to data augmentation. This study was done with Natural Language
-Processing (NLP) techniques to extract topics and knowledge graphs based on
-keywords to understand the different relationships among studies. This
-approach resulted in  a compilation of the most important and current research
-in the field, allowing both researchers and practitioners to use this work as
-a starting point for their own work.  Finally, the development of this work
-represents a crucial step towards the identification of new opportunities
-within the field and consequently towards the following research question and
-objectives. The results of this work is available in
-Chapter~\ref{chp:data-augmentation-trends}.
+done by conducting a literature review to understand the main areas of
+application of synthetic data generation and identify the generation
+mechanisms available for this purpose. To do this, we conducted an extensive
+literature search, compiled the knowledge collected in related literature
+reviews, and analyzed several data generation techniques and areas of
+application. This approach resulted in a compilation of the most important and
+current research in the field, allowing both researchers and practitioners to
+use this work as a starting point for their own work. Finally, the development
+of this work represents a crucial step to identify new opportunities within
+the field and addressing the remaining research questions. The results of this
+work is available in Chapter~\ref{chp:synthetic-data-review}.
 
-The most relevant methods found in Chapter~\ref{chp:data-augmentation-trends}
-will be used for posterior work. Specifically, we address RQ2 using a
+One of the main limitations uncovered in RQ1 (see
+Chapter~\ref{chp:synthetic-data-review}) is the lack of oversampling
+methods applicable to datasets containing categorical features. In fact, only
+two oversamplers were found to be well-suited for oversampling data with mixed
+data types, SMOTENC~\cite{Chawla2002} and random oversampling.  However, in a
+practical setting, datasets with mixed feature types are common but the
+methods available are outdated. RQ2 is addressed with the modification of a
+State-of-the-art oversampling method by mixing its data generation mechanism
+with the one found in SMOTENC\@.
+
+Several relevant methods found in Chapter~\ref{chp:synthetic-data-review}
+will be used for posterior work. Specifically, we address RQ3 using a
 heuristic data augmentation method, K-means SMOTE~\cite{Douzas2018}, as
 described in Chapter~\ref{chp:kmeans-smote}. Since datasets produced for LULC
 classification often contain irrelevant, redundant, noisy and/or unreliable
@@ -566,7 +547,7 @@ oversamplers, such as K-means SMOTE, allow for a more accurate generation of
 minority samples, since it can identify and isolate variations in spectral
 signatures within a land cover class.
 
-At a later stage, in RQ3, we addressed a different instance of the problem of
+At a later stage, in RQ4, we addressed a different instance of the problem of
 rare land cover classes in the training dataset. Specifically, in a context of
 limited sample-collection budget, the collection of the most informative
 samples capable of optimally increasing the classification accuracy of a LULC
@@ -589,25 +570,14 @@ and~\ref{chp:active-learning-augmentation}:
         component for augmentation policies beyond oversampling strategies.
 \end{itemize}
 
-One of the main limitations uncovered in RQ1 (see
-Section~\ref{chp:data-augmentation-trends}) is the lack of oversampling
-methods applicable to datasets containing categorical features. In fact, only
-two oversamplers were found to be capable of oversampling data with
-categorical features, SMOTENC~\cite{Chawla2002} and random oversampling.
-However, in a practical setting, datasets with mixed feature types are common
-but the methods available are outdated. RQ4 will be addressed through the
-modification of a State-of-the-art oversampling method by mixing its data
-generation mechanism with the one found in SMOTENC\@. However, this work is
-still in progress.
-
 \section{Methods}
 
 The methodology used for all contributions follow a similar approach, with
-exception to the work presented in Chapter~\ref{chp:data-augmentation-trends}.
+exception to the work presented in Chapter~\ref{chp:synthetic-data-review}.
 It is composed as follows:
 
 \begin{enumerate}
-    \item Collection of a large number of (LULC, multidisciplinary or image)
+    \item Collection of a large number of (LULC or multidisciplinary)
         classification datasets.
     \item Identification of related literature and limitations to be addressed.
     \item Design and implementation of contributions.
@@ -620,40 +590,47 @@ The methodological approach to the proposed doctoral work is depicted in
 Figure~\ref{fig:phd_structure}. All of the work presented was developed while
 ensuring full reproducibility. Contributions at the algorithm-level are
 implemented in the Python open-source package 
-\href{https://github.com/joaopfonseca/ml-research}{ML-Research}.
+\href{https://github.com/joaopfonseca/ml-research}{ML-Research}. At the time
+of writing, the ML-Research package has been downloaded 12 thousand times via
+the Python Package Index (pypi/pip) and Anaconda (conda-forge channel).
 
 \begin{figure}[ht]
 	\centering
     \includegraphics[width=\linewidth]{phd_structure}
-    \caption{Planned structure and methodological approach of the doctoral work.
+    \caption{Structure and methodological approach used in this dissertation.
     }~\label{fig:phd_structure}
 \end{figure}
 
 
-
 \section{Path of Research}
 
-The work developed is organized in different papers of related subjects,
-namely AL and imbalanced learning. Every submitted or published research
-output is available at
-\href{https://github.com/joaopfonseca/publications}{this GitHub repository},
-along with the \LaTeX\ scripts, data, source code (for data pulling,
-preprocessing, experiments and analysis), experiments' raw outputs and
-analysis outputs (figures, tables and diagrams). The current stage of each of
+Each chapter corresponds to a paper, all of which primarily focused on AL and
+imbalanced learning, with exception to
+Chapter~\ref{chp:synthetic-data-review}. All of these research outputs are
+available at \href{https://github.com/joaopfonseca/publications}{this GitHub
+repository}, along with the \LaTeX\ scripts, data, source code (for data
+pulling, preprocessing, experiments and analysis), experiments' raw outputs
+and analysis outputs (figures, tables and diagrams). The current stage of 
 the studies is presented in Table~\ref{tab:studies}.
 
-\begin{table}[ht]
+\begin{table}%[ht]
     \centering
     \begin{tabular}{ccm{.55\textwidth}m{.2\textwidth}}
         \toprule
         Chapter & RQ & Study Name                                                        & Current stage  \\
         \midrule
-        \ref{chp:data-augmentation-trends} & 1    & Research Trends and Applications 
-                                                   of Data Augmentation
-                                                   Algorithms                          & Under Review 
-                                                                                    (Initial submission)  \\
+        \ref{chp:synthetic-data-review} & 1    & Tabular and Latent Space
+                                                 Synthetic Data Generation: 
+                                                 A Literature Review                      & Under Review   \\
+        % Research Trends and Applications 
+        %                                            of Data Augmentation
+        %                                            Algorithms                          & Under Review 
+        %                                                                            (Initial submission)  \\
         \vspace{-.2cm}\\
-        \ref{chp:kmeans-smote}             & 2    & Improving Imbalanced Land Cover 
+        \ref{chp:gsmotenc} & 2     & Geometric SMOTENC\@: A geometrically
+                                     enhanced drop-in replacement for SMOTENC          & Under Review    \\
+        \vspace{-.2cm}\\
+        \ref{chp:kmeans-smote}             & 3    & Improving Imbalanced Land Cover 
                                                    Classification with K-means SMOTE: 
                                                    Detecting and Oversampling 
                                                    Distinctive Minority Spectral 
@@ -661,7 +638,7 @@ the studies is presented in Table~\ref{tab:studies}.
                                                                                          the journal 
                                                                                          Information      \\
         \vspace{-.2cm}\\
-        \ref{chp:al-generator-lulc}        & 3    & Increasing the Effectiveness of 
+        \ref{chp:al-generator-lulc}        & 4    & Increasing the Effectiveness of 
                                                    Active Learning: Introducing
                                                    Artificial Data Generation in 
                                                    Active Learning for Land Use/Land 
@@ -669,16 +646,11 @@ the studies is presented in Table~\ref{tab:studies}.
                                                                                          the journal 
                                                                                          Remote Sensing   \\
         \vspace{-.2cm}\\
-        \ref{chp:active-learning-augmentation} & 3 & Improving Active Learning 
+        \ref{chp:active-learning-augmentation} & 4 & Improving Active Learning 
                                                    Performance Through the Use of
-                                                   Data Augmentation                   & Under Review 
-                                                                                       ($2^{nd}$ round)   \\
-        \vspace{-.2cm}\\
-        n/a & 3     & S$^4$AD-Learning: Self-supervised Semi-supervised Active Deep 
-                  Learning                                                          & Work in Progress    \\
-        \vspace{-.2cm}\\
-        n/a & 4     & Geometric SMOTENC\@: A geometrically enhanced drop-in 
-                  replacement for SMOTENC                                           & Work in Progress    \\
+                                                   Data Augmentation
+                                               & Published in International
+                                               Journal of Intelligent Systems   \\
         \bottomrule
     \end{tabular}
     \caption{\label{tab:studies}
