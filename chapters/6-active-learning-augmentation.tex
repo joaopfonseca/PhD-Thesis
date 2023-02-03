@@ -119,20 +119,20 @@ implementation.
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\linewidth]{al-example}
-    \caption{%
+    \caption[Illustration of the different acquisition processes in AL.]{%
         Illustration of the different acquisition processes in AL using a
         K-Nearest Neighbors classifier and Shannon's entropy as the
         uncertainty estimation function, with five observations being
         collected and labeled per iteration. The top row shows the behavior of
         a standard AL implementation, while the bottom row shows the behavior
         of the proposed method. Column (a), (b) and (c) show the decision
-        boundaries at iterations 1 (after the collection of five random initial training
-        observations), 2 (with 10 labeled observations) and 3 (with 15 labeled
-        observations), respectively. The initial labeled dataset for both approaches is
-        the same. The two classes are distinguished with $\triangle$ and
-        $\times$, and are colored as red and blue (respectively) if they are
-        labeled. The transparent green observations are synthetic observations
-        (bottow row only).
+        boundaries at iterations 1 (after the collection of five random
+        initial training observations), 2 (with 10 labeled observations) and 3
+        (with 15 labeled observations), respectively. The initial labeled
+        dataset for both approaches is the same. The two classes are
+        distinguished with $\triangle$ and $\times$, and are colored as red
+        and blue (respectively) if they are labeled. The transparent green
+        observations are synthetic observations (bottow row only).
     }~\label{fig:al-example}
 \end{figure}
 
@@ -313,7 +313,7 @@ Yoo2019, Aghdam2019}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.6\linewidth]{al_iteration}
-    \caption{%
+    \caption[Diagram depicting a typical AL iteration.]{%
         Diagram depicting a typical AL iteration. In the first iteration, the
         training set collected during the initialization process becomes the
         ``Current Training Dataset''.
@@ -522,7 +522,7 @@ Algorithm~\ref{alg:al-framework}.
 \begin{figure}
 	\centering
 	\includegraphics[width=.6\linewidth]{al_proposed}
-    \caption{%
+    \caption[Diagram depicting the proposed AL iteration.]{%
         Diagram depicting the proposed AL iteration. The proposed
         modifications are comprised within the red polygon and marked
         with a boldface ``C.''
@@ -705,7 +705,9 @@ of the 15 preprocessed datasets where the experimental procedure was applied.
 \begin{table}
     \centering
     \setlength{\tabcolsep}{2pt}
-    \caption{\label{tab:datasets_description}
+    \caption[Description of the datasets collected after data preprocessing.
+    ]{%
+        \label{tab:datasets_description}
         Description of the datasets collected after data preprocessing. The
         sampling strategy is similar across datasets. Legend: (IR) Imbalance
         Ratio
@@ -898,7 +900,7 @@ to the average of the three runs and 5-fold Cross-Validation estimations
 \begin{figure}
 	\centering
 	\includegraphics[width=.6\linewidth]{experimental_procedure}
-    \caption{%
+    \caption[Experimental procedure flowchart.]{%
         Experimental procedure flowchart. The preprocessed datasets are split
         into five folds. One of the folds is used to test the best-found
         classifiers using AL and the classifiers trained using the entire
@@ -1013,7 +1015,8 @@ performance and ensures higher data selection efficiency.
  
 \begin{table}[ht]
 	\centering
-    \caption{%
+    \caption[Mean rankings of the AULC metric over the different datasets (15),
+        folds (5), and runs (3) used in the experiment.]{%
         Mean rankings of the AULC metric over the different datasets (15),
         folds (5), and runs (3) used in the experiment. The proposed method
         constantly improves the results of the original framework and, on
@@ -1040,7 +1043,8 @@ when compared with the oversampling AL method.
 \begin{table}
 	\centering
     \setlength{\tabcolsep}{2.5pt}
-    \caption{\label{tab:aulc_scores}
+    \caption[Average AULC of each AL configuration tested.]{%
+        \label{tab:aulc_scores}
         Average AULC of each AL configuration tested. Each AULC score is
         calculated using the performance scores of each iteration in the
         validation set. By the end of the iterative process, each AL
@@ -1095,7 +1099,7 @@ requires 19.3\% less data).
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=.8\linewidth]{data_utilization_rate}
-    \caption{%
+    \caption[Mean data utilization rates.]{%
         Mean data utilization rates. The y-axis shows the percentage of data
         (relative to the baseline AL framework) required to reach the
         different performance thresholds.
@@ -1111,7 +1115,8 @@ labeled as MP).
 
 \begin{table}
     \centering
-    \caption{\label{tab:optimal_mean_std_scores}
+    \caption[Optimal classification scores.]{%
+        \label{tab:optimal_mean_std_scores}
         Optimal classification scores. The Maximum Performance (MP)
         classification scores are calculated using classifiers trained using
         the entire training set.
@@ -1150,7 +1155,7 @@ classifier or evaluation metric being considered.
 
 \begin{table}[t]
 	\centering
-    \caption{%
+    \caption[Friedman test results.]{%
         Friedman test results. Statistical significance is tested at a level
         of $\alpha = 0.05$. The null hypothesis is that there is no difference
         in the classification outcome across oversamplers.
@@ -1174,7 +1179,7 @@ datasets, respectively.
 
 \begin{table}
 	\centering
-    \caption{%
+    \caption[Adjusted p-values using the Wilcoxon signed-rank method.]{%
         Adjusted p-values using the Wilcoxon signed-rank method. Bold values
         are statistically significant at a level of $\alpha = 0.05$. The null
         hypothesis is that the performance of the proposed framework is
@@ -1197,7 +1202,7 @@ statistically significant in 9 out of 12 cases.
 
 \begin{table}
 	\centering
-    \caption{%
+    \caption[Adjusted p-values using the Holm-Bonferroni method.]{%
         Adjusted p-values using the Holm-Bonferroni method. Bold values are
         statistically significant at a level of $\alpha = 0.05$. The null
         hypothesis is that the Oversampling or Proposed method does not

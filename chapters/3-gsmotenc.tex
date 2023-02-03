@@ -320,9 +320,9 @@ hyperparameters, the reader is referred to~\cite{Douzas2019}.
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{g-smote}
-    \caption{A visual depiction of G-SMOTENC. In this example,
-        $\alpha_{trunc}$ is approximately 0.5 and $\alpha_{def}$ is
-        approximately 0.4.
+    \caption[A visual depiction of G-SMOTENC.]{%
+        A visual depiction of G-SMOTENC. In this example, $\alpha_{trunc}$ is
+        approximately 0.5 and $\alpha_{def}$ is approximately 0.4.
     }~\label{fig:gsmote}
 \end{figure}
 
@@ -753,12 +753,14 @@ remaining resamplers in 82.5\% of the comparisons done.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{consistency_analysis_plot}
-    \caption{Average ranking of oversamplers over different characteristics of
-        the datasets used in the experiment. Legend: IR --- Imbalance Ratio,
-        Classes --- Number of classes in the dataset, M/NM ratio --- ratio
-        between the number of metric and non-metric features, E$($F-Score$)$
-        --- Mean F-Score of dataset across all combinations of classifiers and
-        oversamplers.
+    \caption[Average ranking of oversamplers over different characteristics of
+        the datasets used in the experiment.]{%
+            Average ranking of oversamplers over different characteristics of
+            the datasets used in the experiment. Legend: IR --- Imbalance
+            Ratio, Classes --- Number of classes in the dataset, M/NM ratio
+            --- ratio between the number of metric and non-metric features,
+            E$($F-Score$)$ --- Mean F-Score of dataset across all combinations
+            of classifiers and oversamplers.
     }~\label{fig:consistency_analysis}
 \end{figure}
 
