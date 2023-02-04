@@ -42,7 +42,8 @@
 \usepackage[
     style=numeric,
     citestyle=numeric,
-    sorting=none,
+    % sorting=none,
+    sorting=nty, % to spot duplicate references
     natbib=true,
     backend=biber, 
     maxcitenames=1, 
@@ -62,7 +63,6 @@
     citecolor={hypecol},
     urlcolor={hypecol}
 }
-
 
 \NewDocumentCommand{\thesischapter}{o m m}{%
    \IfNoValueTF{#1}

@@ -41,7 +41,7 @@ the most commonly used data structures within a wide range of domains.
 However, ML techniques developed for tabular data can be applied to any type
 of data; input data, regardless of its original format, can be mapped into a
 manifold, lower-dimensional abstraction of the input data and mapped back into
-its original input space~\cite{kingma2019introduction, devries2017dataset}.
+its original input space~\cite{kingma2019introduction, DeVries2017}.
 This abstraction is often referred to as embeddings, encodings, feature
 space or latent space. In this paper, we will refer to this concept as
 latent space.
@@ -58,15 +58,15 @@ both labeled and unlabeled data with a modified loss function to train neural
 networks (\textit{i.e.}, semi-supervised learning)~\cite{laine2017temporal}.
 In imbalanced learning contexts, synthetic data can be used to balance the
 target classes' frequencies and reinforce the learning of minority classes
-(\textit{i.e.}, oversampling)~\cite{fonseca2021improving}. Some active
+(\textit{i.e.}, oversampling)~\cite{Fonseca2021}. Some active
 learning frameworks use synthetic data to improve data selection and
-classifier training~\cite{kim2021lada}. Other techniques employ data
+classifier training~\cite{Kim2021}. Other techniques employ data
 generation to train neural networks without labeled data (\textit{i.e.},
 self-supervised learning)~\cite{grill2020bootstrap}.
 
 The breadth of these techniques span multiple domains, such as facial
 recognition~\cite{lv2017data}, Land Use/Land Cover
-mapping~\cite{douzas2019imbalanced}, medical image
+mapping~\cite{Douzas2019rs}, medical image
 processing~\cite{yi2019generative}, Natural Language Processing
 (NLP)~\cite{feng2021survey} or credit card default
 prediction~\cite{alam2020investigation}. According to the domain and data
@@ -79,7 +79,7 @@ Overall, synthetic data generation techniques for tabular data are not as
 explored as image or text data, despite its popularity and
 ubiquity~\cite{fakoor2020fast}. Furthermore, these techniques are invariant to
 the original data format; they can be applied to both the latent
-space~\cite{devries2017dataset} or tabular data. On one hand, data generation
+space~\cite{DeVries2017} or tabular data. On one hand, data generation
 in the latent space uses a generative model to learn a manifold,
 lower-dimensional abstraction over the input
 space~\cite{kingma2019introduction}. At
@@ -158,9 +158,9 @@ specific to the domain. \citet{shorten2021text}, \citet{chen2021empirical},
 \citet{feng2021survey} and \citet{liu2020survey} also review data augmentation
 techniques for text data.  \citet{yi2019generative} review Generative
 Adversarial Network architectures for medical imaging. \citet{wang2020survey}
-reviews face data augmentation techniques. \citet{shorten2019survey},
+reviews face data augmentation techniques. \citet{Shorten2019},
 \citet{khosla2020enhancing} and \citet{khalifa2021comprehensive} discuss
-techniques for image data augmentation.  \citet{iwana2021empirical} and
+techniques for image data augmentation.  \citet{Iwana2021} and
 \citet{wen2020time} also review time series data augmentation techniques.
 \citet{zhao2022graph} review data augmentation techniques for graph data. The
 analysis of related literature reviews~\footnote{Results obtained using Google
@@ -220,7 +220,7 @@ analysis of related literature reviews~\footnote{Results obtained using Google
         techniques using facial image data. Emphasis on Deep Learning
         generative models.\\
 
-        \citet{shorten2019survey} & Image & Deep Learning & --- & Emphasis on
+        \citet{Shorten2019} & Image & Deep Learning & --- & Emphasis on
         data augmentation as a regularization technique.\\
 
         \citet{khosla2020enhancing} & Image & --- & --- & Broad overview of
@@ -230,7 +230,7 @@ analysis of related literature reviews~\footnote{Results obtained using Google
         overview of image data augmentation and relevant domains of
         application.\\
 
-        \citet{iwana2021empirical} & Time series & Classification & --- &
+        \citet{Iwana2021} & Time series & Classification & --- &
         Defined a taxonomy for time series data augmentation.\\
 
         \citet{wen2020time} & Time series & Various & --- & Analysis of data
@@ -360,7 +360,7 @@ In supervised learning tasks where labeled data is not readily available, but
 can be labeled, an Active Learning (AL) method may be used to improve the
 efficiency of the labelling process. AL aims to reduce the cost of producing
 training datasets by finding the most informative observations to label and
-feed into the classifier~\cite{fonseca2021increasing}. In this case, the
+feed into the classifier~\cite{Fonseca2021al}. In this case, the
 generation of synthetic data is particularly useful to reduce the amount of
 labelled data required for a successful ML project. This topic is discussed in
 Section~\ref{sec:active-learning-synth}.
@@ -370,7 +370,7 @@ Two other techniques reliant on synthetic data generation are Semi-supervised
 Learning (Semi-SL) and Self-Supervised Learning (Self-SL). The former
 leverages both labeled and unlabeled data in the training phase,
 simultaneously, while several methods apply perturbations on the training data
-as part of the training procedure~\cite{van2020survey}. The latter, Self-SL,
+as part of the training procedure~\cite{Van2020}. The latter, Self-SL,
 is a technique used to train neural networks in the absence of labeled data.
 Several Semi-SL and Self-SL methods use synthetic data generation as a core
 element. These methods are discussed in
@@ -436,11 +436,11 @@ combination of both.
 The taxonomy proposed in this paper is a combination of
 different definitions found in the literature, extended with other traits that
 vary among domains and generation techniques. Within image data studies,
-\citet{shorten2019survey} and \citet{khalifa2021comprehensive} divide data
+\citet{Shorten2019} and \citet{khalifa2021comprehensive} divide data
 augmentation techniques into ``basic'' or ``classical'' approaches and deep
 learning approaches. In both cases, the former refers to domain-specific
 generation techniques, while the latter may be applied to any data structure.
-\citet{iwana2021empirical} proposes a time-series data augmentation taxonomy
+\citet{Iwana2021} proposes a time-series data augmentation taxonomy
 divided in four families: (1) Random transformation, (2) Pattern mixing, (3)
 Generative models and (4) Decomposition. With exception to generative models,
 the majority of the methods presented in the remaining families are well
@@ -562,22 +562,22 @@ Table~\ref{tbl:generators-synth}.
     HDMM~\cite{mckenna2018optimizing} & DP & Perturb. & Probabilistic & External & Input & Global \\
     DualQuery~\cite{gaboardi2014dual} & DP & Other & Probabilistic & External & Input & Global \\
     ROS(E)~\cite{menardi2014training} & Ovs & Perturb. & Randomized & External & Input & Local \\ 
-    SMOTE~\cite{chawla2002smote} & Ovs & Linear & Randomized & External & Input & Local \\
-    SMOTENC~\cite{chawla2002smote} & Ovs & Linear & Randomized & External & Input & Local \\
-    SMOTEN~\cite{chawla2002smote} & Ovs & --- & --- & External & Input & Local \\
-    Borderline-SMOTE~\cite{han2005borderline} & Ovs & Linear & Randomized & External & Input & Local \\
-    G-SMOTE~\cite{douzas2019geometric} & Ovs & Geometric & Randomized & External & Input & Local \\
-    ADASYN~\cite{he2008adasyn} & Ovs & Linear & Randomized & External & Input & Local \\
+    SMOTE~\cite{Chawla2002} & Ovs & Linear & Randomized & External & Input & Local \\
+    SMOTENC~\cite{Chawla2002} & Ovs & Linear & Randomized & External & Input & Local \\
+    SMOTEN~\cite{Chawla2002} & Ovs & --- & --- & External & Input & Local \\
+    Borderline-SMOTE~\cite{Han2005} & Ovs & Linear & Randomized & External & Input & Local \\
+    G-SMOTE~\cite{Douzas2019} & Ovs & Geometric & Randomized & External & Input & Local \\
+    ADASYN~\cite{HaiboHe2008} & Ovs & Linear & Randomized & External & Input & Local \\
     KernelADASYN~\cite{tang2015kerneladasyn} & Ovs & PDF & Probabilistic & External & Input & Local \\
     MOKAS~\cite{lin2017minority} & Ovs & Other & Network & External & Latent & Global \\
-    SOMO~\cite{douzas2017self} & Ovs & Linear & Net.+Rand. & External & Input & Global \\
+    SOMO~\cite{Douzas2017} & Ovs & Linear & Net.+Rand. & External & Input & Global \\
     G-SOMO~\cite{douzas2021g} & Ovs & Geometric & Net.+Rand. & External & Input & Global \\
     GMM-SENN~\cite{xing2022predict} & Ovs & PDF & Probabilistic & External & Input & Global \\
     GMF-SMOTE~\cite{xu2022synthetic} & Ovs & Linear & Randomized & External & Input & Global \\
     C-VAE~\cite{dai2019generative} & Ovs & AE & Network & External & Latent & Global \\
     Safe-level SMOTE~\cite{bunkhumpornpat2009safe} & Ovs & Linear & Randomized & External & Input & Local \\
     LR-SMOTE~\cite{liang2020lr} & Ovs & Linear & Randomized & External & Input & Global \\
-    K-means SMOTE~\cite{douzas2018improving} & Ovs & Linear & Randomized & External & Input & Global\\
+    K-means SMOTE~\cite{Douzas2018} & Ovs & Linear & Randomized & External & Input & Global\\
     DBSMOTE~\cite{bunkhumpornpat2012dbsmote} & Ovs & Linear & Randomized & External & Input & Local\\
     CGAN~\cite{douzas2018effective} & Ovs & GAN & Network & External & Latent & Global \\
     K-means CTGAN~\cite{an2021k} & Ovs & GAN & Network & External & Latent & Global \\
@@ -600,9 +600,9 @@ Table~\ref{tbl:generators-synth}.
     CTGAN~\cite{xu2019modeling} & DA & GAN & Network & External & Latent & Global \\
     TVAE~\cite{xu2019modeling} & DA & AE & Network & External & Latent & Global \\
     AE~\cite{delgado2021deep} & DA & AE & Network & External & Latent & Global \\
-    InfoMixup~\cite{kim2021lada} & AL & Linear & Network & Internal & Lat.+Out. & Global \\
+    InfoMixup~\cite{Kim2021} & AL & Linear & Network & Internal & Lat.+Out. & Global \\
     VAEACGAN~\cite{tran2019bayesian} & AL & AE & Network & Internal & Latent & Global\\
-    AL-G-SMOTE~\cite{fonseca2021increasing} & AL & Geometric & Randomized & Internal & Input & Local\\
+    AL-G-SMOTE~\cite{Fonseca2021al} & AL & Geometric & Randomized & Internal & Input & Local\\
     DAE~\cite{rasmus2015semi} & Semi-SL & AE & Network & Internal & Input & Global \\ 
     $\Pi$-model~\cite{samuli2017temporal} & Semi-SL & Perturb. & Randomized & Internal & In.+Lat. & Local \\
     Mean Teacher~\cite{tarvainen2017mean} & Semi-SL & Perturb. & Randomized & Internal & In.+Lat. & Local \\
@@ -715,7 +715,7 @@ Table~\ref{tbl:generators-synth}.
 % \end{itemize}
 % 
 % Discuss Auto-augmentation (as mentioned in~\cite{wang2020survey}) or meta
-% learning (as mentioned in~\cite{shorten2019survey})
+% learning (as mentioned in~\cite{Shorten2019})
 
 \section{Algorithmic applications}\label{sec:algorithmic-applications-synth}
 
@@ -896,11 +896,11 @@ producing synthetic observations~\cite{Van2001, Wong2016}. Since it is applied
 at the data level, it can be used for various types of problems and
 classifiers~\cite{Behpour2019}. Earlier definitions of data augmentation refer
 to methods based on iterative optimization or sampling algorithms that
-introduce unobserved data or latent variables~\cite{van2001art}. In the
+introduce unobserved data or latent variables~\cite{Van2001}. In the
 current ML literature, data augmentation techniques mostly refer to the
 former, while the latter is better known as feature extraction. Although data
 augmentation is commonly used and extensively studied in computer
-vision~\cite{shorten2019survey} and natural language
+vision~\cite{Shorten2019} and natural language
 processing~\cite{feng2021survey}, its research on tabular data is less common.
 
 Mixup~\cite{zhang2018mixup} consists of a linear interpolation between two
@@ -930,7 +930,7 @@ drawn from a uniform distribution.
 
 The Modality-Agnostic Automated Data Augmentation in the Latent Space model
 (MODALS)~\cite{cheung2020modals} leverages on the concept discussed
-by~\citet{devries2017dataset}, as well as the Latent Space Interpolation
+by~\citet{DeVries2017}, as well as the Latent Space Interpolation
 method (LSI)~\cite{liu2018data} and M-Mixup~\cite{verma2019manifold}.
 However, MODALS introduces a framework for data augmentation internally. It
 contains a feature extraction step, trained using a combination of adversarial
@@ -993,17 +993,17 @@ Since most supervised ML classifiers are designed to expect classes with
 similar frequencies, training them over imbalanced datasets can result in
 limited classification performance.  With highly skewed distributions in
 $\mathcal{D}_L$, the classifier’s predictions tend to be biased towards
-overrepresented classes~\cite{fonseca2021improving}. For example, one can
+overrepresented classes~\cite{Fonseca2021}. For example, one can
 predict correctly with over 99\% accuracy whether credit card accounts were
 defrauded using a constant classifier. This issue can be addressed in 3
 different ways: resampling, algorithmic modifications and cost-sensitive
-solutions~\cite{douzas2019imbalanced}. Resampling techniques are more general
+solutions~\cite{Douzas2019rs}. Resampling techniques are more general
 approaches when opposed to algorithmic and cost-sensitive methods. They modify
 $\mathcal{D}_L$ to ensure balanced class frequencies by removing majority
 class observations (\textit{i.e.}, undersampling), producing synthetic
 minority class observations (\textit{i.e.}, oversampling), or a combination of
 both. However, since undersampling removes observations from $\mathcal{D}_L$,
-it has the disadvantage of information loss~\cite{feng2019imbalanced} and
+it has the disadvantage of information loss~\cite{Feng2019} and
 lacks effectiveness when compared to oversampling
 methods~\cite{mohammed2020machine, hernandez2013empirical}. Oversampling can
 be considered a specific setting of data augmentation.
@@ -1026,9 +1026,9 @@ It is a bootstrapping approach that, if generated in a smoothed manner
 (\textit{i.e.}, by adding perturbations to the synthetic data), is also
 known as Random Oversampling Examples (ROSE)~\cite{menardi2014training}.
 However, the random duplication of observations often leads to
-overfitting~\cite{krawczyk2016learning}.
+overfitting~\cite{Krawczyk2016}.
 
-The Synthetic Minority Oversampling Technique (SMOTE)~\cite{chawla2002smote}
+The Synthetic Minority Oversampling Technique (SMOTE)~\cite{Chawla2002}
 attempts to address the data duplication limitation in ROS with a two stage 
 data generation mechanism:
 
@@ -1046,7 +1046,7 @@ data generation mechanism:
 
 Although the SMOTE algorithm addresses the limitations in ROS, it brings other
 problems, which motivated the development of several SMOTE-based
-variants~\cite{douzas2019geometric}: (1) it introduces noise when a noisy
+variants~\cite{Douzas2019}: (1) it introduces noise when a noisy
 minority class observation is assigned to $x^c$ or $x^{nn}$, (2) it
 introduces noise when $x^c$ and $x^{nn}$ belong to different minority-class
 clusters, (3) it introduces near duplicate observations when $x^c$ and
@@ -1055,7 +1055,7 @@ imbalance (\textit{i.e.}, different input space regions should assume a
 different importance according to the concentration of minority class
 observations).
 
-Borderline-SMOTE~\cite{han2005borderline} modifies SMOTE's selection
+Borderline-SMOTE~\cite{Han2005} modifies SMOTE's selection
 mechanism. It calculates the $k$-nearest neighbors for all minority class
 observations and selects the ones that are going to be used as $x^c$ in the
 generation phase. An observation is selected based on the number of neighbors
@@ -1064,7 +1064,7 @@ belonging to $C_{min}$ and insufficient number of neighbors belonging
 $C_{maj}$ are not considered for the generation phase. This approximates the
 synthetic observations to the border of the expected decision boundaries.
 Various other methods were proposed since then to modify selection mechanism,
-such as K-means SMOTE~\cite{douzas2018improving}. This approach addresses
+such as K-means SMOTE~\cite{Douzas2018}. This approach addresses
 within-class imbalance and the generation of noisy synthetic data by
 generating data within clusters. The data generation is done according to each
 cluster's imbalance ratio and dispersion of minority class observations.
@@ -1072,7 +1072,7 @@ DBSMOTE~\cite{bunkhumpornpat2012dbsmote} also modifies the selection strategy
 by selecting as $x^c$ the set of core observations in a DBSCAN clustering
 solution.
 
-The Adaptive Synthetic Sampling approach (ADASYN)~\cite{he2008adasyn} uses a
+The Adaptive Synthetic Sampling approach (ADASYN)~\cite{HaiboHe2008} uses a
 comparable approach to Borderline-SMOTE\@. It calculates the ratio of
 non-minority class observations within the $k$-nearest neighbors of each $x
 \in C_{min}$. The amount of observations to be generated using each $x \in
@@ -1090,7 +1090,7 @@ Modifications to SMOTE's generation mechanism are less common and generally
 attempt to address problem of noisy synthetic data generation. Safe-level
 SMOTE~\cite{bunkhumpornpat2009safe} truncates the line segment between $x^c$
 and $x^{nn}$ according to a safe level ratio. Geometric-SMOTE
-(G-SMOTE)~\cite{douzas2019geometric} it generates synthetic data within a
+(G-SMOTE)~\cite{Douzas2019} it generates synthetic data within a
 deformed and truncated hypersphere to also avoid the generation of
 near-duplicate synthetic data. It also introduces a modification of the
 selection strategy to combine the selection of majority class observations as
@@ -1118,7 +1118,7 @@ which synthetic data is generated. The synthetic data is generated using a
 lower dimensional representation of the input data to ensure the reconstructed
 data is different from the original observations. Overall, the usage of SOMs
 for oversampling is uncommon. Another two examples of this approach,
-SOMO~\cite{douzas2017self} and G-SOMO~\cite{douzas2021g} use a similar
+SOMO~\cite{Douzas2017} and G-SOMO~\cite{douzas2021g} use a similar
 approach as K-means SMOTE\@. In the case of G-SOMO, the SMOTE
 generation mechanism is replaced by G-SMOTE's instead.
 
@@ -1161,14 +1161,14 @@ oversampling for classification problems using continuous features appears as
 a relatively well explored problem, there is a general lack of research on
 oversampling using nominal features or mixed data types (\textit{i.e.}, using
 both nominal and continuous features) and regression problems.
-SMOTENC~\cite{chawla2002smote} introduces a SMOTE adaptation for mixed data
+SMOTENC~\cite{Chawla2002} introduces a SMOTE adaptation for mixed data
 types. It calculates the nearest neighbors of $x^c$ by including in the
 euclidean distance metric the median of the standard deviations of the
 continuous features for every nominal feature values that are different
 between $x^c$ and $x^{nn}$. The generation is done using the normal SMOTE
 procedure for the continuous features and the nominal features are determined
 with their modes within $x^c$'s nearest neighbors. The
-SMOTEN~\cite{chawla2002smote} is an oversampling algorithm for nominal
+SMOTEN~\cite{Chawla2002} is an oversampling algorithm for nominal
 features only. It uses the nearest neighbor approach proposed in
 \citet{cost1993weighted} and generates $x^s$ using the modes of the features
 in $x^c$'s nearest neighbors. Solutions to oversampling in regression problems
@@ -1210,17 +1210,17 @@ observations. AL is an iterative process where an acquisition function
 $f_{acq}(x, f_\theta): \mathcal{D}_U \to \mathbb{R}$ computes a classification
 uncertainty score for each unlabeled observation, at each iteration.
 $f_{acq}$ provides the selection criteria based on the uncertainty scores,
-$f_\theta$ and the labeling budget~\cite{kim2021lada}.
+$f_\theta$ and the labeling budget~\cite{Kim2021}.
 
 One way to improve an AL process is via the generation of synthetic data. In
 this case, synthetic data is expected to improve classification with a better
 definition of the classifier's decision boundaries. This allows the allocation
 of the data collection budget over a larger area of the input space. These
 methods can be divided into AL with pipelined data augmentation approaches and
-AL with within-acquisition data augmentation~\cite{kim2021lada}. Pipelined
+AL with within-acquisition data augmentation~\cite{Kim2021}. Pipelined
 data augmentation is the more intuitive approach, where at each training phase
 the synthetic data is produced to improve the quality of the classifier and is
-independent from $f_{acq}$. In \citet{fonseca2021increasing}, the pipelined
+independent from $f_{acq}$. In \citet{Fonseca2021al}, the pipelined
 approach in tabular data achieves a superior performance compared to the
 traditional AL framework using the G-SMOTE algorithm and the oversampling
 generation policy. Other methods, although developed and tested on image data,
@@ -1230,7 +1230,7 @@ uses a VAE architecture along with an auxiliary-classifier generative
 adversarial network (ACGAN)~\cite{odena2017conditional} to generate synthetic
 data.
 
-The Look-Ahead Data Acquisition via augmentation algorithm~\cite{kim2021lada}
+The Look-Ahead Data Acquisition via augmentation algorithm~\cite{Kim2021}
 proposes an acquisition function that considers the classification uncertainty
 of synthetic data generated using a given unlabeled observation, instead of
 only estimating classification uncertainty of the unlabeled observation
@@ -1269,7 +1269,7 @@ algorithms to leverage both labeled and unlabeled data. This approach is used
 when $|\mathcal{D}_U| \gg |\mathcal{D}_L|$ (similarly to AL settings), but
 additional labeled data is too difficult to acquire. In recent years,
 the research developed in this area directed much of its focus to neural
-network-based models and generative learning~\cite{van2020survey}. Overall,
+network-based models and generative learning~\cite{Van2020}. Overall,
 Semi-SL can be distinguished between transductive and inductive methods. In
 this section, we will focus on synthetic data generation mechanisms in
 inductive, perturbation-based Semi-SL algorithms, applicable to tabular or
@@ -1364,7 +1364,7 @@ usage of the generation mechanisms across the selected works and learning
 problems.
 
 We focus on 2 key conditions for the data generation process, smoothness and
-manifold space (adapted from the background in~\cite{van2020survey}). The
+manifold space (adapted from the background in~\cite{Van2020}). The
 smoothness condition requires that if two observations $x_i, x_j$ are close,
 then it's expected that $y_i, y_j$ have the same value.  The manifold
 condition requires synthetic data generation to occur within locally euclidean
