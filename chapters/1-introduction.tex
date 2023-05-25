@@ -604,14 +604,14 @@ the Python Package Index (pypi/pip) and Anaconda (conda-forge channel).
 
 \section{Path of Research}
 
-Each chapter corresponds to a paper, all of which primarily focused on AL and
-imbalanced learning, with exception to
-Chapter~\ref{chp:synthetic-data-review}. All of these research outputs are
+Each chapter corresponds to a paper (either published or under submission),
+all of which primarily focused on AL and imbalanced learning, with exception
+to Chapter~\ref{chp:synthetic-data-review}. All of these research outputs are
 available at \href{https://github.com/joaopfonseca/publications}{this GitHub
 repository}, along with the \LaTeX\ scripts, data, source code (for data
 pulling, preprocessing, experiments and analysis), experiments' raw outputs
-and analysis outputs (figures, tables and diagrams). The current stage of 
-the studies is presented in Table~\ref{tab:studies}.
+and analysis outputs (figures, tables and diagrams). The current stage of the
+studies is presented in Table~\ref{tab:studies}.
 
 \begin{table}%[ht]
     \centering
@@ -658,3 +658,19 @@ the studies is presented in Table~\ref{tab:studies}.
         program.
     }
 \end{table}
+
+This dissertation uses synthetic data generation as the core concept
+throughout its development. The contributions presented in each chapter
+can be split between domain specificity (agnostic versus LULC-specific) and
+base technique (oversampling versus AL).
+Chapter~\ref{chp:synthetic-data-review} presents a comprehensive literature
+review of the central concept of the dissertation, synthetic data generation.
+Chapter~\ref{chp:gsmotenc} proposes a domain-agnostic oversampling technique,
+to address the problem of datasets with mixed data types (\textit{i.e.},
+containing both metric and non-metric features).
+Chapter~\ref{chp:kmeans-smote} applies an oversampling technique to LULC
+classification problems. Chapter~\ref{chp:al-generator-lulc} proposes an AL
+framework using synthetic data generation applied to LULC classification.
+Section~\ref{chp:active-learning-augmentation} modifies and improves the
+AL framework proposed in the previous chapter and ensure its effectiveness
+over several different domains. 

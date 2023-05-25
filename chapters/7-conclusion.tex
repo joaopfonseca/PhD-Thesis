@@ -1,4 +1,4 @@
-\chapter{Conclusion}~\label{chp:conclusion}
+\chapter{Conclusions}~\label{chp:conclusion}
 
 This dissertation focused on addressing 4 main research questions. The main
 focus of these questions was to address common scenarios where typical ML
@@ -9,27 +9,70 @@ to address the limitation of oversampling on datasets with mixed data types
 and (2) an AL framework that relies on synthetic data to reduce data
 collection requirements to produce well-performing ML classifiers.
 
-In Chapter~\ref{chp:synthetic-data-review} we studied the state-of-the-art in
-data augmentation algorithms, which was necessary to proceed to subsequent
-steps of the work plan. The remaining work presented in this dissertation was
-developed based on these findings. The Geometric-SMOTENC oversampler proposed
-in Chapter~\ref{chp:gsmotenc} uses the generation mechanism described
+In Chapter~\ref{chp:synthetic-data-review} we studied the state-of-the-art of
+synthetic data generation techniques, which was necessary to proceed to subsequent
+steps of the work plan. We found several limitations in the literature
+regarding latent space learning, selection of generation mechanisms, data
+privacy mechanisms, analysis of quality of synthetic data for regularization
+techniques, consistency and interpretability of generative neural network
+methods, ensmble techniques for tabular data, oversampling tabular data with
+mixed data types, lack of research of synthetic data generation in tabular few-shot
+learning and lack of research of the effect of synthetic data towards model
+fairness and bias.
+
+The remaining work presented in this dissertation was developed based on these
+findings. The Geometric-SMOTENC oversampler proposed in
+Chapter~\ref{chp:gsmotenc} uses the generation mechanism described
 in~\cite{Douzas2019}, while encoding the continuous features, calculating the
 selected observations' nearest neighbors and generating the categorical
 feature values for the synthetic data using the method described
-in~\cite{Chawla2002}. In Chapter~\ref{chp:kmeans-smote} we used an
-oversampling method to address the prevailing problem of imbalanced learning
-in LULC\@.
+in~\cite{Chawla2002}. This method can be considered a generalization of the
+classical SMOTENC approach, since a specific parametrization of this algorithm
+will replicate SMOTENC's behavior. However, this method allows a significantly
+wider array of possibilities and high variability in the synthetic data being
+generated. In addition, it may be applied before any type of categorical
+feature encoding.
 
-In Chapters~\ref{chp:al-generator-lulc}
-and~\ref{chp:active-learning-augmentation} we proposed a modification of the
-AL framework as a means to address RQ4. However, the work presented can be
-further enriched with the application of other methods that leverage
+In Chapter~\ref{chp:kmeans-smote} we used an oversampling method to address
+the prevailing problem of imbalanced learning in LULC\@. A distinctive
+characteristic of LULC classification is the potential for some classes to
+contain significantly different spectral signatures (\textit{e.g.}, two
+patches of forests or agricultural areas may contain entirely different types
+of vegetation, despite having the same class). In this case, clustering-based
+synthetic data generation assists in distinguishing these differences
+within a minority class among clusters and avoid the generation of noisy
+synthetic data.
+
+In Chapter~\ref{chp:al-generator-lulc} we introduce a modification of the
+typical AL framework in order to address RQ4. To the best of our knowledge,
+this was one of the first methods to implement synthetic data into AL using
+tabular data. The proposed framework showed a significant reduction of the
+amount of required labeled data to reach a given performance threshold.
+Consequently, this method may be used to reduce the labeling cost when
+preparing a training dataset without harming classification performance\@.
+
+In Chapter~\ref{chp:active-learning-augmentation} we focus on the
+generalization of the AL framework previously proposed regarding both the
+domain of application and data generation policy. We introduce a new component
+to this framework to optimize the data generation method within each
+iteration, broaden the data generation policies employed, and test the new
+framework across several datasets from different domains. Overall, this
+optimized method to employ synthetic data in AL further reduced the amount of
+data labeling required to achieve the same classification performance. In
+addition, we also found a significant improvement in classification
+performance using this approach, even when compared to a classifier trained
+using the fully labeled dataset. The work presented in this dissertation can
+be further enriched with the application of other methods that leverage
 information from unlabeled data, specifically semi-supervised and
 self-supervised learning techniques to form a single framework.
 
-Despite the focus on the case of LULC classification, which is particularly
-challenging due to its dimensionality, all of the methods proposed are
-generalizable. In addition, they achieved a statistically significant superior
-performance compared to the state-of-the-art. Overall, the entirety of the
-work presented is fully replicable, open source, and domain transferable. 
+Although this dissertation addressed some important open questions found in
+the literature, several others must be explored in future work;
+Chapter~\ref{chp:synthetic-data-review} discusses such limitations and
+research gaps into a high level of detail. Despite the focus on the case of
+LULC classification, which is particularly challenging due to its
+high-dimensionality, all of the methods proposed are entirely generalizable.
+In addition, all of the methods proposed/explored achieved a statistically
+significant superior performance compared to the state-of-the-art. Overall,
+the entirety of the work presented is fully replicable, open source, and
+domain transferable. 
