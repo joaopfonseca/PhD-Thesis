@@ -1,4 +1,4 @@
-\section{Algorithmic applications}\label{sec:algorithmic-applications}
+\section{Algorithmic Applications}\label{sec:algorithmic-applications}
 
 In this section, we discuss the data generation mechanisms for the different
 contexts where they are applied. We emphasize the constraints in each problem
@@ -49,23 +49,23 @@ appealing since it is not affected by post-processing; any ML pipeline may be
 applied on $\mathcal{D}^s$ while maintaining $(\epsilon, \delta)$-differential
 privacy~\cite{dwork2014algorithmic}.
 
-Choosing an appropriate DP synthetic data generation technique
-is generally challenging and depends on the task to be developed (if known) and the domain. However,
-marginal-based algorithms appear to perform well across various
-tests~\cite{tao2021benchmarking}. A well-known method for the generation of DP
-synthetic datasets is the combination of the Multiplicative Weights update
-rule with the Exponential Mechanism (MWEM)~\cite{hardt2012simple}. MWEM is an
-active learning-style algorithm that maintains an approximation of
-$\mathcal{D}^s$. At each time step, MWEM selects the worst approximated query
-(determined by a scoring function) using the Exponential Mechanism and
-improves the accuracy of the approximating distribution using the
-Multiplicative Weights update rule. A known limitation of this method is its
-lack of scalability. Since this method represents the approximate data
-distribution in datacubes, this method becomes infeasible for high-dimensional
-problems~\cite{mckenna2019graphical}. This limitation was addressed with the
-integration of a Probabilistic Graphical Model-based (PGM) estimation into
-MWEM (MWEM-PGM) and a subroutine to compute and optimize the clique marginals
-of the PGM, along with other existing privacy
+Choosing an appropriate Differentially Private (DP) synthetic data generation
+technique is generally challenging and depends on the task to be developed (if
+known) and the domain. However, marginal-based algorithms appear to perform
+well across various tests~\cite{tao2021benchmarking}. A well-known method for
+the generation of DP synthetic datasets is the combination of the
+Multiplicative Weights update rule with the Exponential Mechanism
+(MWEM)~\cite{hardt2012simple}. MWEM is an active learning-style algorithm that
+maintains an approximation of $\mathcal{D}^s$. At each time step, MWEM selects
+the worst approximated query (determined by a scoring function) using the
+Exponential Mechanism and improves the accuracy of the approximating
+distribution using the Multiplicative Weights update rule. A known limitation
+of this method is its lack of scalability. Since this method represents the
+approximate data distribution in datacubes, this method becomes infeasible for
+high-dimensional problems~\cite{mckenna2019graphical}. This limitation was
+addressed with the integration of a Probabilistic Graphical Model-based (PGM)
+estimation into MWEM (MWEM-PGM) and a subroutine to compute and optimize the
+clique marginals of the PGM, along with other existing privacy
 mechanisms~\cite{mckenna2019graphical}. Besides MWEM, this method was used to
 modify and improve the quality of other DP algorithms:
 PrivBayes~\cite{zhang2017privbayes}, HDMM~\cite{mckenna2018optimizing} and
@@ -230,7 +230,7 @@ performance across various evaluation criteria.
 
 Another less popular approach for network-based synthetic data generation
 is
-autoencoder architectures. TVAE, proposed in~\cite{xu2019modeling} achieved
+autoencoder architectures. TVAE, proposed in~\cite{xu2019modeling}, achieved
 state-of-the art performance.  It consists of the VAE algorithm with an
 architecture modified for tabular data (\textit{i.e.}, 1-dimensional).
 However, as discussed by the authors, this method contains limitations since
@@ -371,7 +371,7 @@ sample data, followed by the application of SMOTEENN to leverage the Edited
 Nearest Neighbors (ENN) methods as a means to reduce the noise in the training
 dataset. The GMM Filtering-SMOTE (GMF-SMOTE)~\cite{xu2022synthetic} algorithm
 applies a somewhat inverse approach; a GMM is used to detect and delete
-boundary samples the synthetic data is generated with SMOTE.
+boundary samples, while the synthetic data is generated with SMOTE.
 
 The contrastive learning-based VAE approach proposed
 in~\cite{dai2019generative}, designed for oversampling, was adapted from

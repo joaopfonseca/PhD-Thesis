@@ -40,14 +40,14 @@
 
 % use \citet for inline text references, \cite for normal citations
 \usepackage[
-    style=numeric,
-    citestyle=numeric,
+    style=apa,
+    % citestyle=apa,
     % sorting=none,
-    sorting=nty, % to spot duplicate references
+    sorting=nyt, % to spot duplicate references
     natbib=true,
     backend=biber, 
-    maxcitenames=1, 
-    maxbibnames=99
+    % maxcitenames=1, 
+    % maxbibnames=99
 ]{biblatex}
 \bibliography{references}
 \usepackage{breakcites}
@@ -74,6 +74,8 @@
 
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH] \THEYEAR}
+
+\renewcommand{\cite}{\parencite}
 
 
 \begin{document}

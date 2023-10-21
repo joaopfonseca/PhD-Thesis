@@ -119,76 +119,76 @@ Table~\ref{tbl:generators}.
     
     \bottomrule
     \endlastfoot
-    SDV~\cite{patki2016synthetic} & Anon. & PDF & Probabilistic & External & Input & Global \\
-    MST~\cite{mckenna2021winning} & DP & PGM & Probabilistic & External & Input & Global \\
-    MWEM~\cite{hardt2012simple} & DP & Other & Probabilistic & External & Input & Global \\
-    MWEM-PGM~\cite{mckenna2019graphical} & DP & PGM & Probabilistic & External & Input & Global \\
-    PrivBayes~\cite{zhang2017privbayes} & DP & PGM & Probabilistic & External & Input & Global \\
-    DPGAN~\cite{xie2018differentially} & DP & GAN & Network & External & Latent & Global \\
-    DPCTGAN~\cite{rosenblatt2020differentially} & DP & GAN &  Network & External & Latent & Global \\
-    PATE-GAN~\cite{jordon2018pate} & DP & GAN & Network & External & Lat. + Out. & Global \\
-    PATECTGAN~\cite{rosenblatt2020differentially} & DP & GAN & Network & External & Lat. + Out. & Global \\
-    FEM~\cite{vietri2020new} & DP & Perturb. & Probabilistic & External & Input & Global \\
-    RAP~\cite{aydore2021differentially} & DP & Perturb. & Probabilistic & External & Input & Global \\
-    PDF~\cite{de2019formal, suciu2011probabilistic} & --- & PDF & Probabilistic & External & Input & Global \\
-    Kamino~\cite{ge2021kamino} & DP & PDF & Probabilistic & External & Input & Global \\
-    RON-GAUSS~\cite{chanyaswad2019ron} & DP & PDF & Probabilistic & Internal & Latent & Global \\
-    HDMM~\cite{mckenna2018optimizing} & DP & Perturb. & Probabilistic & External & Input & Global \\
-    DualQuery~\cite{gaboardi2014dual} & DP & Other & Probabilistic & External & Input & Global \\
-    ROS(E)~\cite{menardi2014training} & Ovs & Perturb. & Randomized & External & Input & Local \\ 
-    SMOTE~\cite{Chawla2002} & Ovs & Linear & Randomized & External & Input & Local \\
-    SMOTENC~\cite{Chawla2002} & Ovs & Linear & Randomized & External & Input & Local \\
-    SMOTEN~\cite{Chawla2002} & Ovs & --- & --- & External & Input & Local \\
-    Borderline-SMOTE~\cite{Han2005} & Ovs & Linear & Randomized & External & Input & Local \\
-    G-SMOTE~\cite{Douzas2019} & Ovs & Geometric & Randomized & External & Input & Local \\
-    ADASYN~\cite{HaiboHe2008} & Ovs & Linear & Randomized & External & Input & Local \\
-    KernelADASYN~\cite{tang2015kerneladasyn} & Ovs & PDF & Probabilistic & External & Input & Local \\
-    MOKAS~\cite{lin2017minority} & Ovs & Other & Network & External & Latent & Global \\
-    SOMO~\cite{Douzas2017} & Ovs & Linear & Net.+Rand. & External & Input & Global \\
-    G-SOMO~\cite{douzas2021g} & Ovs & Geometric & Net.+Rand. & External & Input & Global \\
-    GMM-SENN~\cite{xing2022predict} & Ovs & PDF & Probabilistic & External & Input & Global \\
-    GMF-SMOTE~\cite{xu2022synthetic} & Ovs & Linear & Randomized & External & Input & Global \\
-    C-VAE~\cite{dai2019generative} & Ovs & AE & Network & External & Latent & Global \\
-    Safe-level SMOTE~\cite{bunkhumpornpat2009safe} & Ovs & Linear & Randomized & External & Input & Local \\
-    LR-SMOTE~\cite{liang2020lr} & Ovs & Linear & Randomized & External & Input & Global \\
-    K-means SMOTE~\cite{Douzas2018} & Ovs & Linear & Randomized & External & Input & Global\\
-    DBSMOTE~\cite{bunkhumpornpat2012dbsmote} & Ovs & Linear & Randomized & External & Input & Local\\
-    CGAN~\cite{douzas2018effective} & Ovs & GAN & Network & External & Latent & Global \\
-    K-means CTGAN~\cite{an2021k} & Ovs & GAN & Network & External & Latent & Global \\
-    SMOTER~\cite{torgo2013smote} & Ovs + Reg & Linear & Randomized & External & Input & Local \\
-    G-SMOTER~\cite{camacho2022geometric} & Ovs + Reg & Linear & Randomized & External & Input & Local \\
-    RACOG~\cite{das2014racog} & Ovs & PGM & Probabilistic & External & Input & Global \\
-    wRACOG~\cite{das2014racog} & Ovs & PGM & Probabilistic & External & Input & Global \\
-    RWO~\cite{zhang2014rwo} & Ovs & PGM & Probabilistic & External & Input & Global \\
-    PDFOS~\cite{gao2014pdfos} & Ovs & PDF & Probabilistic & External & Input & Global \\
-    Mixup~\cite{zhang2018mixup} & DA & Linear & Randomized & External & In.+Out. & Local \\
-    M-Mixup~\cite{verma2019manifold} & DA & Linear & Network & Internal & Lat.+Out. & Global \\
-    NL-Mixup~\cite{guo2020nonlinear} & DA & Geometric & Randomized & External & In.+Out. & Local \\
-    AE-DA~\cite{feng2020autuencoder} & DA & AE & Network & External & In./Lat.+Out. & Local \\
-    MODALS~\cite{cheung2020modals} & DA & --- & Network & Internal & Latent & Global \\
-    LSI~\cite{liu2018data} & DA & AE & Network & External & Lat.+Out. & Global \\
-    Gibbs~\cite{fakoor2020fast} & DA & PGM & Probabilistic & External & Input & Global \\
-    MedGAN~\cite{armanious2020medgan} & DA & GAN & Network & External & Latent & Global \\
-    GANBLR~\cite{zhang2021ganblr} & DA & PGM & Probabilistic & External & Input & Global \\
-    Table-GAN~\cite{park2018data} & DA & GAN & Network & External & Latent & Global \\
-    CTGAN~\cite{xu2019modeling} & DA & GAN & Network & External & Latent & Global \\
-    TVAE~\cite{xu2019modeling} & DA & AE & Network & External & Latent & Global \\
-    AE~\cite{delgado2021deep} & DA & AE & Network & External & Latent & Global \\
-    InfoMixup~\cite{Kim2021} & AL & Linear & Network & Internal & Lat.+Out. & Global \\
-    VAEACGAN~\cite{tran2019bayesian} & AL & AE & Network & Internal & Latent & Global\\
-    AL-G-SMOTE~\cite{Fonseca2021al} & AL & Geometric & Randomized & Internal & Input & Local\\
-    DAE~\cite{rasmus2015semi} & Semi-SL & AE & Network & Internal & Input & Global \\ 
-    $\Pi$-model~\cite{samuli2017temporal} & Semi-SL & Perturb. & Randomized & Internal & In.+Lat. & Local \\
-    Mean Teacher~\cite{tarvainen2017mean} & Semi-SL & Perturb. & Randomized & Internal & In.+Lat. & Local \\
-    ICT~\cite{verma2022interpolation} & Semi-SL & Linear & Randomized & Internal & Input & Local \\
-    Mixmatch~\cite{berthelot2019mixmatch} & Semi-SL & Linear & Randomized & Internal & Input & Local \\
-    SDAT~\cite{fang2022semi} & Semi-SL & AE+PDF & Net.+Prob. & Internal & Latent & Global \\
-    MCoM~\cite{li2022mcom} & Semi-SL & Linear & Randomized & Int.+Ext. & Inp.+Lat. & Global \\
-    C-Mixup~\cite{darabi2021contrastive} & Semi/Self-SL & AE+Lin. & Net+Rand.  & Internal & Latent & Global \\
-    VIME~\cite{yoon2020vime} & Semi/Self-SL & Perturb. & Randomized & Internal & Input & Local \\
-    SubTab~\cite{ucar2021subtab} & Self-SL & Perturb. & Rand.+Prob. & Internal & Input & Local \\
-    Scarf~\cite{bahri2022scarf} & Self-SL & Perturb. & Randomized & Internal & Input & Local \\
-    A-SFS~\cite{qiu2022sfs} & Self-SL & Perturb. & Randomized & Internal & Input & Local \\
+    SDV & Anon. & PDF & Probabilistic & External & Input & Global \\
+    MST & DP & PGM & Probabilistic & External & Input & Global \\
+    MWEM & DP & Other & Probabilistic & External & Input & Global \\
+    MWEM-PGM & DP & PGM & Probabilistic & External & Input & Global \\
+    PrivBayes & DP & PGM & Probabilistic & External & Input & Global \\
+    DPGAN & DP & GAN & Network & External & Latent & Global \\
+    DPCTGAN & DP & GAN &  Network & External & Latent & Global \\
+    PATE-GAN & DP & GAN & Network & External & Lat. + Out. & Global \\
+    PATECTGAN & DP & GAN & Network & External & Lat. + Out. & Global \\
+    FEM & DP & Perturb. & Probabilistic & External & Input & Global \\
+    RAP & DP & Perturb. & Probabilistic & External & Input & Global \\
+    PDF & --- & PDF & Probabilistic & External & Input & Global \\
+    Kamino & DP & PDF & Probabilistic & External & Input & Global \\
+    RON-GAUSS & DP & PDF & Probabilistic & Internal & Latent & Global \\
+    HDMM & DP & Perturb. & Probabilistic & External & Input & Global \\
+    DualQuery & DP & Other & Probabilistic & External & Input & Global \\
+    ROS(E) & Ovs & Perturb. & Randomized & External & Input & Local \\ 
+    SMOTE & Ovs & Linear & Randomized & External & Input & Local \\
+    SMOTENC & Ovs & Linear & Randomized & External & Input & Local \\
+    SMOTEN & Ovs & --- & --- & External & Input & Local \\
+    Borderline-SMOTE & Ovs & Linear & Randomized & External & Input & Local \\
+    G-SMOTE & Ovs & Geometric & Randomized & External & Input & Local \\
+    ADASYN & Ovs & Linear & Randomized & External & Input & Local \\
+    KernelADASYN & Ovs & PDF & Probabilistic & External & Input & Local \\
+    MOKAS & Ovs & Other & Network & External & Latent & Global \\
+    SOMO & Ovs & Linear & Net.+Rand. & External & Input & Global \\
+    G-SOMO & Ovs & Geometric & Net.+Rand. & External & Input & Global \\
+    GMM-SENN & Ovs & PDF & Probabilistic & External & Input & Global \\
+    GMF-SMOTE & Ovs & Linear & Randomized & External & Input & Global \\
+    C-VAE & Ovs & AE & Network & External & Latent & Global \\
+    Safe-level SMOTE & Ovs & Linear & Randomized & External & Input & Local \\
+    LR-SMOTE & Ovs & Linear & Randomized & External & Input & Global \\
+    K-means SMOTE & Ovs & Linear & Randomized & External & Input & Global\\
+    DBSMOTE & Ovs & Linear & Randomized & External & Input & Local\\
+    CGAN & Ovs & GAN & Network & External & Latent & Global \\
+    K-means CTGAN & Ovs & GAN & Network & External & Latent & Global \\
+    SMOTER & Ovs + Reg & Linear & Randomized & External & Input & Local \\
+    G-SMOTER & Ovs + Reg & Linear & Randomized & External & Input & Local \\
+    RACOG & Ovs & PGM & Probabilistic & External & Input & Global \\
+    wRACOG & Ovs & PGM & Probabilistic & External & Input & Global \\
+    RWO & Ovs & PGM & Probabilistic & External & Input & Global \\
+    PDFOS & Ovs & PDF & Probabilistic & External & Input & Global \\
+    Mixup & DA & Linear & Randomized & External & In.+Out. & Local \\
+    M-Mixup & DA & Linear & Network & Internal & Lat.+Out. & Global \\
+    NL-Mixup & DA & Geometric & Randomized & External & In.+Out. & Local \\
+    AE-DA & DA & AE & Network & External & In./Lat.+Out. & Local \\
+    MODALS & DA & --- & Network & Internal & Latent & Global \\
+    LSI & DA & AE & Network & External & Lat.+Out. & Global \\
+    Gibbs & DA & PGM & Probabilistic & External & Input & Global \\
+    MedGAN & DA & GAN & Network & External & Latent & Global \\
+    GANBLR & DA & PGM & Probabilistic & External & Input & Global \\
+    Table-GAN & DA & GAN & Network & External & Latent & Global \\
+    CTGAN & DA & GAN & Network & External & Latent & Global \\
+    TVAE & DA & AE & Network & External & Latent & Global \\
+    AE & DA & AE & Network & External & Latent & Global \\
+    InfoMixup & AL & Linear & Network & Internal & Lat.+Out. & Global \\
+    VAEACGAN & AL & AE & Network & Internal & Latent & Global\\
+    AL-G-SMOTE & AL & Geometric & Randomized & Internal & Input & Local\\
+    DAE & Semi-SL & AE & Network & Internal & Input & Global \\ 
+    $\Pi$-model & Semi-SL & Perturb. & Randomized & Internal & In.+Lat. & Local \\
+    Mean Teacher & Semi-SL & Perturb. & Randomized & Internal & In.+Lat. & Local \\
+    ICT & Semi-SL & Linear & Randomized & Internal & Input & Local \\
+    Mixmatch & Semi-SL & Linear & Randomized & Internal & Input & Local \\
+    SDAT & Semi-SL & AE+PDF & Net.+Prob. & Internal & Latent & Global \\
+    MCoM & Semi-SL & Linear & Randomized & Int.+Ext. & Inp.+Lat. & Global \\
+    C-Mixup & Semi/Self-SL & AE+Lin. & Net+Rand.  & Internal & Latent & Global \\
+    VIME & Semi/Self-SL & Perturb. & Randomized & Internal & Input & Local \\
+    SubTab & Self-SL & Perturb. & Rand.+Prob. & Internal & Input & Local \\
+    Scarf & Self-SL & Perturb. & Randomized & Internal & Input & Local \\
+    A-SFS & Self-SL & Perturb. & Randomized & Internal & Input & Local \\
 \end{longtable}
 \endgroup
 

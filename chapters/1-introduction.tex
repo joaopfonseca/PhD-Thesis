@@ -6,7 +6,7 @@ Accurate LULC maps constitute a unique resource for a variety of applications.
 Its applications range from environmental monitoring, land change detection,
 and natural hazard assessment to agriculture and water/wetland
 monitoring~\cite{Khatami2016}. However, the production of LULC maps often
-require the involvement of multiple photo-interpreters with specialized
+requires the involvement of multiple photo-interpreters with specialized
 skills, making the process expensive, time-consuming and unsuitable for
 operational LULC mapping over large areas~\cite{Douzas2019rs}. Therefore, the
 manual production of LULC maps are often outdated by the time they are
@@ -60,7 +60,7 @@ approach is hampered by several limitations:
         process~\cite{Simeoni2020}.
 \end{enumerate}
 
-The latter two challenges, imbalanced learning (\textit{i.e.}, infrequent LULC
+The last two challenges, imbalanced learning (\textit{i.e.}, infrequent LULC
 classes) and scarcity of labeled data, are the focus of this dissertation.
 These two challenges may be addressed in various different ways, all of which
 will be discussed throughout the following chapters.
@@ -82,7 +82,7 @@ learning can be divided into three main groups~\cite{Fernandez2013}:
         class(es) or adding observations belonging to the minority class(es).
 \end{enumerate}
 
-The latter set of methods, resampling solutions, benefit from their
+The last set of methods, resampling solutions, benefit from their
 simplicity. This type of approach does not require domain knowledge to define
 a cost matrix and does not require specialized classifiers. These methods
 can be further divided into (1) Oversampling, where an algorithm generates
@@ -117,7 +117,7 @@ which fall between supervised and unsupervised learning:
         classifier's performance with as least data as possible.
 \end{enumerate}
 
-The latter method, Active Learning, benefits from the possibility of including
+The last method, Active Learning, benefits from the possibility of including
 different techniques into its pipeline, including the former two. It is
 therefore one of the main focus of this thesis. In
 Section~\ref{sec:active_learning} this topic is discussed to a greater extent.
@@ -174,7 +174,7 @@ methods were originally developed as oversamplers, whose goal is to balance
 the class frequencies of the target variable in the training dataset and
 address the class imbalance bias. Therefore, oversampling methods may be
 considered a subset of Data Augmentation. Data Augmentation strategies may
-follow varying augmentation strategies, which does not necessarily depend on
+follow varying augmentation strategies, which do not necessarily depend on
 the target class distribution. An example of the differences among general
 data augmentation and oversampling generation strategies is shown in
 Figure~\ref{fig:augmentation_strategies}.
@@ -319,7 +319,7 @@ steps~\cite{Su2020, Sverchkov2017}:
     }~\label{fig:al_iteration_int}
 \end{figure}
 
-Two common challenges found in AL implementations is the consistency and
+Two common challenges found in AL implementations are the consistency and
 efficiency of AL in practical scenarios~\cite{Kottke2017}. On the one hand,
 the consistency problem refers to the high variance in performance (regarding
 classification and data selection) over different initializations
@@ -360,7 +360,7 @@ categories~\cite{Gu2021, Kumar2020}:
 
 Although there are significant contributions towards the development of more
 robust query functions and classifiers in AL, modifications to AL's basic
-structure is rarely explored. In~\cite{Yoo2019} the authors introduce a loss
+structure are rarely explored. In~\cite{Yoo2019} the authors introduce a loss
 prediction module in the AL framework to replace the uncertainty criterion.
 This model implements a second classifier to predict the expected loss of the
 unlabeled observations (using the actual losses collected during the training
@@ -434,7 +434,7 @@ known as Entropy Querying-by-Bagging uses the predictions of all estimators to
 find the maximum entropy of each observation~\cite{Abe1998}.
 
 The Query by Committee (QBC) strategy was developed to address ensemble
-classifiers. It is a disagreement based strategy attempts to maximize the
+classifiers. It is a disagreement based strategy that attempts to maximize the
 information gain at each iteration by computing the disagreement of the
 predictions over the estimators that form the ensemble. The Entropy
 Querying-by-Bagging and Query-by-Boosting methods are also ensemble
@@ -457,8 +457,11 @@ Sampling method.
 
 \section{Research Questions}
 
-The main research questions (RQ) and goals of this dissertation are the
-following:
+This dissertation aims to explore and develop new domain-agnostic methods,
+leveraged by synthetic data generation techniques, while showing their
+effectiveness in difficult classification problems, specifically LULC
+classification. The main research questions (RQ) and goals of this
+dissertation are the following:
 
 \begin{enumerate}
     \item What are the main research lines in synthetic data generation?
@@ -473,14 +476,14 @@ following:
             \item Development of an improved oversampling method to be used
                 with mixed data types.
         \end{itemize}
-    \item How can automatic LULC mapping achieve an increased and consistent
-        quality?
+    \item How can the quality and consistency of automatic LULC mapping be
+        enhanced?
           \begin{itemize}
               \item Exploration of imbalanced learning methods in the context
                   of LULC\@.
           \end{itemize}
-    \item How can one perform automated LULC mapping efficiently under limited
-        ground-truth data availability?
+    \item How can efficient automated LULC mapping be achieved with limited
+        availability of ground-truth data?
         \begin{itemize}
             \item Development of an improved active learning framework in the
                 remote sensing domain using artificial data generation.
@@ -527,7 +530,7 @@ two oversamplers were found to be well-suited for oversampling data with mixed
 data types, SMOTENC~\cite{Chawla2002} and random oversampling.  However, in a
 practical setting, datasets with mixed feature types are common but the
 methods available are outdated. RQ2 is addressed with the modification of a
-State-of-the-art oversampling method by mixing its data generation mechanism
+state-of-the-art oversampling method by mixing its data generation mechanism
 with the one found in SMOTENC\@.
 
 Several relevant methods found in Chapter~\ref{chp:synthetic-data-review}
@@ -572,7 +575,7 @@ and~\ref{chp:active-learning-augmentation}:
 
 \section{Methods}
 
-The methodology used for all contributions follow a similar approach, with
+The methodology used for all contributions follows a similar approach, with
 exception to the work presented in Chapter~\ref{chp:synthetic-data-review}.
 It is composed as follows:
 
