@@ -1,4 +1,4 @@
-# Preprocessing methods for Supervised Learning and Land Use/Land Cover Classification
+# The Role of Synthetic Data in Improving Supervised Learning Methods: The Case of Land Use/Land Cover Classification
 
 This repo contains the figures, tables and LaTeX source code of my PhD Thesis.
-In addition, the presentation will also be made available.
+The presentation made for my PhD thesis defense is also available.
